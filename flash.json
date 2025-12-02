@@ -1,25 +1,25 @@
 {
  "Configuration": {},
- "FileName": "jokk",
- "Version": "3.2.0",
+ "FileName": "flash",
+ "Version": "3.2.1",
  "ReleaseNotes": "",
  "contactSupport": "",
  "Servers": [
   {
    "Name": "Dtac ကျိုင်းဒီအရံနက်",
-   "serverType": 4,
+   "serverType": "4",
    "FLAG": "dtac",
-   "Category": 1,
+   "Category": "1",
    "ServerIP": "auto.vip1.mvpn5g.com",
    "ServerCloudFront": "auto.vip1.mvpn5g.com",
    "ServerHTTP": "auto.vip1.mvpn5g.com",
    "TcpPort": "",
    "SSLPort": "443",
    "ProxyPort": "8080",
-   "AutoLogIn": true,
+   "AutoLogIn": "true",
    "Username": "movpn",
    "Password": "movpn",
-   "MultiCert": false,
+   "MultiCert": "false",
    "ovpnCertificate": ""
   }
  ],
@@ -27,9 +27,25 @@
   {
    "FLAG": "dtac",
    "proto_spin": 1,
-   "server_type": "http",
+   "server_type": "cf",
    "Name": "Dtac ကျိုင်းဒီအရံနက်",
-   "NetworkPayload": "{\n  \"obfs\": \"movpn\",\n  \"up_mbps\": 20,\n  \"down_mbps\": 20,\n  \"retry\": 3,\n  \"retry_interval\": 1,\n  \"socks5\": {\n    \"listen\": \"127.0.0.1:1080\"\n  },\n  \"http\": {\n    \"listen\": \"127.0.0.1:8989\"\n  },\n  \"insecure\": true,\n  \"ca\": \"\",\n  \"recv_window_conn\": 196608,\n  \"recv_window\": 491520\n}",
+   "NetworkPayload": {
+    "obfs": "movpn",
+    "up_mbps": 20,
+    "down_mbps": 20,
+    "retry": 3,
+    "retry_interval": 1,
+    "socks5": {
+     "listen": "127.0.0.1:1080"
+    },
+    "http": {
+     "listen": "127.0.0.1:8989"
+    },
+    "insecure": true,
+    "ca": "",
+    "recv_window_conn": 196608,
+    "recv_window": 491520
+   },
    "Info": "",
    "UseDefProxy": true,
    "AutoReplace": false,
