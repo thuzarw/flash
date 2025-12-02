@@ -1,32 +1,33 @@
 {
- "FileName": "bjkk",
- "Version": "3.1.9",
+ "Configuration": {},
+ "FileName": "jokk",
+ "Version": "3.2.0",
  "ReleaseNotes": "",
  "contactSupport": "",
  "Servers": [
   {
    "Name": "Dtac ကျိုင်းဒီအရံနက်",
-   "serverType": "4",
+   "serverType": 4,
    "FLAG": "dtac",
-   "Category": "1",
+   "Category": 1,
    "ServerIP": "auto.vip1.mvpn5g.com",
    "ServerCloudFront": "auto.vip1.mvpn5g.com",
    "ServerHTTP": "auto.vip1.mvpn5g.com",
    "TcpPort": "",
    "SSLPort": "443",
    "ProxyPort": "8080",
-   "AutoLogIn": "true",
+   "AutoLogIn": true,
    "Username": "movpn",
    "Password": "movpn",
-   "MultiCert": "false",
+   "MultiCert": false,
    "ovpnCertificate": ""
   }
  ],
  "HTTPNetworks": [
   {
-   "FLAG": "ais",
+   "FLAG": "dtac",
    "proto_spin": 1,
-   "server_type": "cf",
+   "server_type": "http",
    "Name": "Dtac ကျိုင်းဒီအရံနက်",
    "NetworkPayload": "{\n  \"obfs\": \"movpn\",\n  \"up_mbps\": 20,\n  \"down_mbps\": 20,\n  \"retry\": 3,\n  \"retry_interval\": 1,\n  \"socks5\": {\n    \"listen\": \"127.0.0.1:1080\"\n  },\n  \"http\": {\n    \"listen\": \"127.0.0.1:8989\"\n  },\n  \"insecure\": true,\n  \"ca\": \"\",\n  \"recv_window_conn\": 196608,\n  \"recv_window\": 491520\n}",
    "Info": "",
@@ -39,44 +40,5 @@
   }
  ],
  "SSLNetworks": [],
- "AllItems": [
-  {
-   "type": "server",
-   "data": {
-    "Name": "Dtac ကျိုင်းဒီအရံနက်",
-    "serverType": "4",
-    "FLAG": "dtac",
-    "Category": "1",
-    "ServerIP": "auto.vip1.mvpn5g.com",
-    "ServerCloudFront": "auto.vip1.mvpn5g.com",
-    "ServerHTTP": "auto.vip1.mvpn5g.com",
-    "TcpPort": "",
-    "SSLPort": "443",
-    "ProxyPort": "8080",
-    "AutoLogIn": "true",
-    "Username": "movpn",
-    "Password": "movpn",
-    "MultiCert": "false",
-    "ovpnCertificate": ""
-   }
-  },
-  {
-   "type": "http",
-   "data": {
-    "FLAG": "ais",
-    "proto_spin": 1,
-    "server_type": "cf",
-    "Name": "Dtac ကျိုင်းဒီအရံနက်",
-    "NetworkPayload": "{\n  \"obfs\": \"movpn\",\n  \"up_mbps\": 20,\n  \"down_mbps\": 20,\n  \"retry\": 3,\n  \"retry_interval\": 1,\n  \"socks5\": {\n    \"listen\": \"127.0.0.1:1080\"\n  },\n  \"http\": {\n    \"listen\": \"127.0.0.1:8989\"\n  },\n  \"insecure\": true,\n  \"ca\": \"\",\n  \"recv_window_conn\": 196608,\n  \"recv_window\": 491520\n}",
-    "Info": "",
-    "UseDefProxy": true,
-    "AutoReplace": false,
-    "SquidProxy": "[Default]",
-    "SquidPort": "8080",
-    "NetworkFrontQuery": "",
-    "NetworkBackQuery": ""
-   }
-  }
- ],
  "Ovpn_Cert": ""
 }
