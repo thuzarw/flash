@@ -1,25 +1,25 @@
 {
  "Configuration": {},
  "FileName": "flash",
- "Version": "3.2.1",
+ "Version": "3.2.4",
  "ReleaseNotes": "",
  "contactSupport": "",
  "Servers": [
   {
    "Name": "Dtac ကျိုင်းဒီအရံနက်",
-   "serverType": "4",
+   "serverType": 4,
    "FLAG": "dtac",
-   "Category": "1",
+   "Category": 1,
    "ServerIP": "auto.vip1.mvpn5g.com",
    "ServerCloudFront": "auto.vip1.mvpn5g.com",
    "ServerHTTP": "auto.vip1.mvpn5g.com",
    "TcpPort": "",
    "SSLPort": "443",
    "ProxyPort": "8080",
-   "AutoLogIn": "true",
+   "AutoLogIn": true,
    "Username": "movpn",
    "Password": "movpn",
-   "MultiCert": "false",
+   "MultiCert": false,
    "ovpnCertificate": ""
   }
  ],
@@ -32,7 +32,7 @@
    "NetworkPayload": {
     "obfs": "movpn",
     "up_mbps": 20,
-    "down_mbps": 20,
+    "down_mbps": 100,
     "retry": 3,
     "retry_interval": 1,
     "socks5": {
@@ -50,7 +50,7 @@
    "UseDefProxy": true,
    "AutoReplace": false,
    "SquidProxy": "[Default]",
-   "SquidPort": "8080",
+   "SquidPort": 8080,
    "NetworkFrontQuery": "",
    "NetworkBackQuery": ""
   }
